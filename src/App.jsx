@@ -7,6 +7,7 @@ const App3 = React.lazy(() => import('app3/App'));
 function App() {
   return (
     <div>
+      Container APP
       <h1>Container App</h1>
       <Suspense fallback={<div>Loading App 1...</div>}>
         <App1 />

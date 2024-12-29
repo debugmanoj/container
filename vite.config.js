@@ -3,15 +3,16 @@ import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 import pkg from "./package.json";
 
+console.log("process.env.VITE_APP1_URL: ", process.env.VITE_APP1_URL);
 export default defineConfig({
   plugins: [
     react(),
     federation({
       name: "conainer",
       remotes: {
-        app1: process.env.VITE_APP1_URL || "http://localhost:5171",
-        app2: process.env.VITE_APP2_URL || "http://localhost:5172",
-        app3: process.env.VITE_APP3_URL || "http://localhost:5173",
+        app1: process.env.VITE_APP1_URL || "http://localhost:5173",
+        app2: process.env.VITE_APP2_URL || "http://localhost:5174/",
+        app3: process.env.VITE_APP3_URL || "http://localhost:5175/",
       },
       shared: Object.keys(pkg.dependencies).reduce(
         (sharedConfig, dependency) => {
