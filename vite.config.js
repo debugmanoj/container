@@ -11,9 +11,9 @@ export default defineConfig({
     federation({
       name: "conainer",
       remotes: {
-        app1: `${process.env.VITE_APP1_URL}/remoteEntry.js` || "http://localhost:5173",
-        app2: `${process.env.VITE_APP2_URL}/remoteEntry.js` || "http://localhost:5174/",
-        app3: `${process.env.VITE_APP3_URL}/remoteEntry.js` || "http://localhost:5175/",
+        app1: `${process.env.VITE_APP1_URL}remoteEntry.js` || "http://localhost:5173",
+        app2: `${process.env.VITE_APP2_URL}remoteEntry.js` || "http://localhost:5174/",
+        app3: `${process.env.VITE_APP3_URL}remoteEntry.js` || "http://localhost:5175/",
       },
       shared: Object.keys(pkg.dependencies).reduce(
         (sharedConfig, dependency) => {
