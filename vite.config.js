@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 import pkg from "./package.json";
-
 console.log("process.env.VITE_APP1_URL: ", process.env.VITE_APP1_URL);
+console.log("process.env.VITE_APP2_URL: ", process.env.VITE_APP2_URL);
+console.log("process.env.VITE_APP3_URL: ", process.env.VITE_APP3_URL);
 export default defineConfig({
   plugins: [
     react(),
